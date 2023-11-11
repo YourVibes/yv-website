@@ -1,0 +1,266 @@
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.slider {
+  width: 80vw;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.slider-image {
+  display: none;
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(25%);
+  position: absolute;
+  left: 0;
+}
+
+.slider-text {
+  position: absolute;
+  display: none;
+  transform: translate(calc(70vw - 50%), 32px);
+  font-size: 12pt;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(0, 0, 0, .5);
+  padding: .5rem 1rem;
+  border-radius: 100px;
+}
+
+.slider-text:first-child {
+  display: block;
+}
+
+.slider-image:first-child {
+  display: block;
+}
+
+.app__text__2 {
+  width: 80vw;
+  padding: 10vh 25vw;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 0;
+  z-index: 5;
+  transform: translate(-20vw, 0);
+}
+
+.app__text__2.in-page {
+  opacity: 1;
+}
+
+.app__text__h2 {
+  margin-bottom: 1rem;
+  font-size: 32pt;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(-20px);
+}
+
+.app__text__h2.in-page {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.app__text__p {
+  font-size: 12pt;
+  font-weight: 300;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(20px);
+}
+
+.app__text__p.in-page {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.app__image {
+  height: 100vh;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(20px);
+}
+
+.app__image.in-page {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.app__text__1 {
+  width: 25%;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 0;
+}
+
+.app__text__1.in-page {
+  opacity: 1;
+}
+
+.app__categories img {
+  width: 19vw;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* Responsive */
+/* Small devices (landscape phones) */
+@media (max-width: 576px) {
+  .app1 {
+    flex-direction: column;
+  }
+
+  .app__image {
+    width: auto;
+    height: 50vh;
+  }
+
+  .app__text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .app__text__h2 { font-size: 16pt; }
+
+  .app__text__p { font-size: 12pt; }
+
+  .slider {
+    width: 100vw;
+  }
+
+  .slider-image {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slider-text {
+    font-size: 12pt;
+    transform: translate(calc(70vw - 50%), 64px);
+  }
+
+  .app__text__2 {
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+    transform: translate(0, 40vh);
+  }
+
+  .app__text__1 {
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .app1 {
+    flex-direction: column;
+  }
+
+  .app__image {
+    width: auto;
+    height: 60vh;
+  }
+
+  .slider-image {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app__text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .app__text__h2 { font-size: 16pt; }
+
+  .app__text__p { font-size: 12pt; }
+
+  .slider-text {
+    font-size: 12pt;
+  }
+
+  .app__text__1 {
+    width: 100vw;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .app1 {
+    flex-direction: column;
+  }
+
+  .app__image {
+    width: auto;
+    height: 70vh;
+  }
+  
+  .slider-image {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app__text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .app__text__h2 { font-size: 16pt; }
+
+  .app__text__p { font-size: 12pt; }
+
+  .slider-text {
+    font-size: 12pt;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .app1 {
+    flex-direction: column;
+  }
+
+  .app__image {
+    width: auto;
+    height: 80vh;
+  }
+
+  .app__text {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .slider-image {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app__text__h2 { font-size: 16pt; }
+
+  .app__text__p { font-size: 12pt; }
+
+  .slider-text {
+    font-size: 12pt;
+  }
+}

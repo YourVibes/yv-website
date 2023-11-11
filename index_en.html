@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YourVibes - Explore a universe of events or create an unforgettable one</title>
+  <meta name="description" content="YourVibes, the Italian social network to create and participate in events in your area or in a city we are visiting. #YourEventsYourVibes">
+  <meta name="author" content="Christian Alessandri, Fabio Cheli, Emiliano Giusti, Jacopo Iozzelli, Davide Sciaulino, Andrea Spotti, Alessio Stavola">
+  <meta name="copyright" content="yourvibes.it">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="rating" content="safe for kids">
+  <meta name="dc.language" content="ita" scheme="RFC1766">
+  <meta property="og:title" content="YourVibes - Explore a universe of events or create an unforgettable one" />
+  <meta property="og:description" content="YourVibes, the Italian social network to create and participate in events in your area or in a city we are visiting. #YourEventsYourVibes" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/117088537?s=200&v=4" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/default.css">
+  <link rel="stylesheet" href="./styles/cookies.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/talk_about_us.css">
+  <link rel="stylesheet" href="./styles/about_us.css">
+  <link rel="stylesheet" href="./styles/globe.css">
+  <link rel="stylesheet" href="./styles/app.css">
+  <link rel="stylesheet" href="./styles/team.css">
+  <link rel="stylesheet" href="./styles/partner.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/8fd3ac0ac3.js" crossorigin="anonymous"></script>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEP1R6E73X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BEP1R6E73X');
+  </script>
+</head>
+
+<body>
+  <!-- Cookies -->
+  <div id="cookies">
+    <p>We use cookies to ensure the best experience on our website. To find out more, go to the privacy page.</p>
+  </div>
+  <div id="cookies-btn">
+    <p class="close-btn" onclick="hideCookies()">CLOSE</p>
+  </div>
+
+  <!-- Navbar -->
+  <div class="topnav" id="nav">
+    <div class="topnav__content">
+      <a href="./index.html" class="active">
+        <img src="assets/logos/white.svg" alt="YourVibes logo">
+      </a>
+      <div class="topnav__link">
+        <a href="./index_en.html#home">Home</a>
+        <a href="./index_en.html#about-us">About Us</a>
+        <a href="./index_en.html#app">App</a>
+        <a href="./index_en.html#team">Team</a>
+        <a href="./index.html">Vai a: 🇮🇹</a>
+        <a href="javascript:void(0);" class="icon" onclick="nav()">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home -->
+  <div id="home">
+    <div style="position: absolute; width: 100%; height: 10vh; z-index: 3; bottom: 0; background: linear-gradient(rgba(0,0,0,0), #000);"></div>
+    <div id="carousel">
+      <video id="slider" autoplay muted loading="lazy">
+        <source src="./assets/videos/disco.mp4" type="video/mp4">
+      </video>
+
+      <button id="prevBtn" class="btn" onclick="prevVideo()"><i class="fa-solid fa-backward"></i></button>
+      <button id="nextBtn" class="btn" onclick="nextVideo()"><i class="fa-solid fa-forward"></i></button>
+    </div>
+    
+    <div class="home__text">
+      <h2>#YourEventsYourVibes</h2>
+      <hr class="home__divider">
+      <h1>Discover unique events and activities in your area with YourVibes</h1>
+      <p>With YourVibes, saying goodbye to boredom is easy. Browse unique events and activities in your area and dive into a universe of emotions.<br>Be among the first to try the app by joining the waitlist!</p>
+    </div>
+
+    <div></div>
+
+    <!-- Scroll Arrows -->
+    <div class="scroll-indicator-1">
+      <svg width="40" height="15" viewBox="0 0 40 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 9L0 0l16.182 13.35a6 6 0 0 0 7.636 0L40 0 20 9z" fill="#f5f5f7"></path>
+      </svg>
+    </div>
+    <div class="scroll-indicator-2">
+      <svg width="40" height="15" viewBox="0 0 40 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 9L0 0l16.182 13.35a6 6 0 0 0 7.636 0L40 0 20 9z" fill="#f5f5f7"></path>
+      </svg>
+    </div>
+  </div>
+
+
+  <!-- Parlano di noi -->
+  <div id="talk-about-us">
+    <div class="talk-about-us__title">
+      <h2 class="watch">Talking about us</h2>
+    </div>
+    <div class="talk-about-us__pics">
+      <a href="https://www.ittfedifermi.edu.it/studenti-del-fedi-fermi-premiati-per-lapp-innovativa-yourvibes-che-incoraggia-la-socialita-offline/"><img src="./assets/logos/itts_fedi_fermi.png" alt="ITTS Fedi-Fermi Logo"></a>
+      <a href="https://www.jaitalia.org/2023/05/03/listituto-tecnico-tecnologico-statale-silvano-fedi-enrico-fermi-di-pistoia-vince-il-premio-migliore-impresa-ja-della-toscana/ "><img src="./assets/logos/ja_italia.png" alt="JA Italia Logo"></a>
+      <a href="https://www.lanazione.it/pistoia/cronaca/pure-i-giovani-fanno-impresa-e-cosi-listituto-fedifermi-si-conferma-uneccellenza-1df909ca?amp=1"><img src="./assets/logos/la_nazione.jpg" alt="La Nazione Logo"></a>
+      <a href="https://www.reportpistoia.com/tre-studenti-dellitts-fedi-fermi-premiati-allapp-contest/ "><img src="./assets/logos/report_pistoia.png" alt="Report Pistoia Logo"></a>
+      <a href="https://www.ittfedifermi.edu.it/le-migliori-start-up-studentesche-sono-al-fedi-fermi/"><img src="./assets/logos/itts_fedi_fermi.png" alt="ITTS Fedi-Fermi Logo"></a>
+    </div>
+  </div>
+
+
+  <!-- Chi Siamo -->
+  <div id="about-us">
+    <div class="about-us__contents">
+      <img src="assets/logos/white.svg" alt="YourVibes logo" class="about-us__image watch">
+
+      <div class="about-us__text">
+        <h2 class="about-us__text__h2 watch">YourVibes</h2>
+        <p class="about-us__text__p watch">YourVibes is the app that simplifies the creation and participation in events, making them accessible to everyone.<br>With YourVibes you can create events by sharing them with the community, participate in events created by other users and discover new emotions.</p>
+      </div>
+    </div>    
+  </div>
+
+  <!-- Premi & Certificazioni -->
+  <div id="talk-about-us">
+    <div class="talk-about-us__title">
+      <h2 class="watch">Awards & Achievements</h2>
+    </div>
+    <div class="talk-about-us__pics">
+      <a href="https://www.impresainazione.it/"><img src="./assets/logos/impresa_in_azione.webp" alt="Impresa in Azione Logo"></a>
+      <a href="https://florence-one.it/"><img src="./assets/logos/florence_one.png" alt="Florence One Logo"></a>
+    </div>
+  </div>
+
+  <div id="globe">
+    <div class="globe__text">
+      <h2 class="globe__text__h2 watch">Mission & Vision</h2>
+      <p class="globe__text__p watch"><strong>Mission</strong>: To make it easier to meet, connect and create authentic social relationships.<br><br><strong>Vision</strong>: To become one of the leading tools globally in the management and research sector of events.</p>
+    </div>
+  </div>
+
+
+  <!-- App -->
+  <div id="app">
+    <div class="app1">
+      <div class="app__text__1 watch">
+        <h2 class="app__text__h2 watch">Your events, your vibes</h2>
+        <p class="app__text__p watch">YourVibes is a simple and intuitive app for creating and participating in personalized events. With a few simple steps you can create an event and invite friends and strangers to participate.</p>
+      </div>
+      <img src="./assets/images/app.png" alt="YourVibes' App" class="app__image watch">
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; min-height: 100vh;">
+      <div class="slider watch">
+        <img src="./assets/images/categories/art_and_culture.jpg" alt="Arte e cultura" class="slider-image">
+        <p class="slider-text">ARTS & CULTURE</p>
+        <img src="./assets/images/categories/charity.jpg" alt="Beneficenza" class="slider-image">
+        <p class="slider-text">CHARITY</p>
+        <img src="./assets/images/categories/education.jpg" alt="Educazione" class="slider-image">
+        <p class="slider-text">EDUCATION</p>
+        <img src="./assets/images/categories/exhibitions.jpg" alt="Fiere" class="slider-image">
+        <p class="slider-text">EXHIBITIONS</p>
+        <img src="./assets/images/categories/food_and_beverages.jpg" alt="Cibo e bevande" class="slider-image">
+        <p class="slider-text">FOOD & DRINKS</p>
+        <img src="./assets/images/categories/health_and_wellness.jpg" alt="Salute e benessere" class="slider-image">
+        <p class="slider-text">HEALTH & WELLNESS</p>
+        <img src="./assets/images/categories/music.jpg" alt="Musica" class="slider-image">
+        <p class="slider-text">MUSIC</p>
+        <img src="./assets/images/categories/party.jpg" alt="Party" class="slider-image">
+        <p class="slider-text">PARTY</p>
+        <img src="./assets/images/categories/shopping.jpg" alt="Shopping" class="slider-image">
+        <p class="slider-text">SHOPPING</p>
+        <img src="./assets/images/categories/shows.jpg" alt="Spettacoli" class="slider-image">
+        <p class="slider-text">SHOWS</p>
+        <img src="./assets/images/categories/sport.jpg" alt="Sport" class="slider-image">
+        <p class="slider-text">SPORT</p>
+        <img src="./assets/images/categories/unique_experiences.jpg" alt="Esperienze uniche" class="slider-image">
+        <p class="slider-text">UNIQUE EXPERIENCES</p>
+  
+        <div class="app__text__2 watch">
+          <h2 class="app__text__h2 watch">A universe of vibes</h2>
+          <p class="app__text__p watch">With YourVibes, you are never alone! Meet new people and create or participate in exciting events in your area or in a place you are visiting. Check out our wide range of categories or create a whole new one!<br>Don't wait, join the YourVibes community today and start living life to the fullest!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Team -->
+  <div id="team">
+    <div class="team__team">
+      <div class="team__team__text">
+        <h2 class="watch">Team</h2>
+        <p class="watch">The YourVibes team is made up of a group of passionate and motivated young people, all born in 2004. Together, they have designed and developed the YourVibes app, which allows users to create and participate in events in a simple and intuitive way.<br> <br>The project was born in the classroom, where the creators encountered the difficulty of organizing events with friends and acquaintances. With YourVibes, they want to make this process easier and more accessible to everyone.<br><br>The YourVibes team is constantly working to improve and expand the app's features, to offer an ever more complete and satisfying. With a strong passion for technology and innovation, the YourVibes team is ready to grow their startup and reach new heights.</p>
+      </div>
+      
+      <img src="./assets/images/team/team.jpg" alt="YourVibes Team" class="team__team__image watch">
+    </div>
+
+    <div class="team__people">
+      <div class="team__people__sub-container">
+        <div class="person-container watch">
+          <img src="./assets/images/team/christian.jpg" alt="Christian Alessandri">
+          <div class="social-container">
+            <a href="https://www.instagram.com/christian.alessandrii/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/ChristianAlessandri/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Christian Alessandri</h3>
+          <p>Co-Founder & CEO</p>
+        </div>
+  
+        <div class="person-container watch">
+          <img src="./assets/images/team/fabio.jpg" alt="Fabio Cheli">
+          <h3>Fabio Cheli</h3>
+          <div class="social-container">
+            <a href="https://www.instagram.com/c_f_04/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/FabioCheli/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <p>Co-Founder</p>
+        </div>
+  
+        <div class="person-container watch">
+          <img src="./assets/images/team/davide.jpg" alt="Davide Sciaulino">
+          <div class="social-container">
+            <a href="https://www.instagram.com/losciauoff/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/DavideSciaulino/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Davide Sciaulino</h3>
+          <p>Co-Founder</p>
+        </div>
+      </div>
+
+      <div class="team__people__sub-container">
+        <div class="person-container watch">
+          <img src="./assets/images/team/emiliano.jpg" alt="Emiliano Giusti">
+          <div class="social-container">
+            <a href="https://www.instagram.com/emigiu_04/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/GnaiGamer04/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Emiliano Giusti</h3>
+        </div>
+
+        <div class="person-container watch">
+          <img src="./assets/images/team/jacopo.jpg" alt="Jacopo Iozzelli">
+          <div class="social-container">
+            <a href="https://www.instagram.com/iozze04/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/iozze/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Jacopo Iozzelli</h3>
+        </div>
+
+        <div class="person-container watch">
+          <img src="./assets/images/team/andrea.jpg" alt="Andrea Spotti">
+          <div class="social-container">
+            <a href="https://www.instagram.com/andrea.sp04/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/AndreaSp04/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Andrea Spotti</h3>
+        </div>
+
+        <div class="person-container watch">
+          <img src="./assets/images/team/alessio.jpg" alt="Alessio Stavola">
+          <div class="social-container">
+            <a href="https://www.instagram.com/ale.txt_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/AlessioStavola04/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <h3>Alessio Stavola</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Sponsor -->
+  <div id="sponsor">
+    <div class="sponsor__title">
+      <h2 class="watch">Our partners</h2>
+    </div>
+    <div class="sponsor__pics">
+      <a href="http://www.alessandri-impianti.it/"><img src="./assets/logos/alessandri_impianti.png" alt="Alessandri Impianti srl Logo"></a>
+      <a href="https://www.facebook.com/cpline/?locale=it_IT"><img src="./assets/logos/computer_line.png" alt="Computer Line"></a>
+      <a href="https://www.informazione-aziende.it/Azienda_IMPRESA-EDILE-SCIAULINO-FILIPPO-DI-SCIAULINO-GIUSEPPE-C-SNC"><img src="./assets/logos/impresa_edile_sciaulino.png" alt="Impresa Edile Sciaulino Logo"></a>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div class="footer__social">
+      <a href="https://www.instagram.com/yourvibes_app/" target="_blank" class="footer__icon">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@yourvibes_app" target="_blank" class="footer__icon">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/@yourvibes_app" target="_blank" class="footer__icon">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="mailto:faq.yourvibes@gmail.com" class="footer__icon">
+        FAQs & Bug report <i class="fa-solid fa-inbox"></i>
+      </a>
+      <a href="mailto:team.yourvibes@gmail.com" class="footer__icon">
+        Email <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer__hr"></div>
+
+    <div class="footer__links">
+      <p class="footer__copyright">Made with 💜 by YourVibes™ - All rights reserved.</p>
+      <div style="width: 1px; height: 1rem; background-color: #f5f5f7ed;"></div>
+      <a href="privacy.html" class="footer__link">Privacy Policy</a>
+      <a href="terms_and_conditions.html" class="footer__link">Terms & Conditions</a>
+    </div>
+  </div>
+
+
+  <!-- JS -->
+  <script src="./scripts/cookies.js"></script>
+  <script src="./scripts/observer.js"></script>
+  <script src="./scripts/navbar.js"></script>
+  <script src="./scripts/slider.js"></script>
+  <script src="./scripts/libraries/three.min.js"></script>
+  <script src="./scripts/libraries/vanta.globe.min.js"></script>
+  <script src="./scripts/globe.js"></script>
+</body>
+</html>

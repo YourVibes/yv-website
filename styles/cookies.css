@@ -1,0 +1,69 @@
+#cookies {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 1rem;
+  border-radius: 100px;
+  bottom: 10vh;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+#cookies p {
+  font-size: 8pt;
+}
+
+#cookies-btn {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 1rem;
+  border-radius: 100px;
+  bottom: 2.5vh;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+
+#cookies-btn .close-btn {
+  font-size: 8pt;
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#cookies-btn .close-btn:hover {
+  cursor: pointer;
+}
+
+
+/* Responsive */
+/* Small devices (landscape phones) */
+@media (max-width: 576px) {
+  #cookies {
+    width: 75vw;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #cookies {
+    width: 75vw;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+  #cookies {
+    width: 75vw;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  #cookies {
+    width: 75vw;
+  }
+}

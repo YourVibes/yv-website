@@ -1,0 +1,98 @@
+#go_to_app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#go_to_app img {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.container {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.login-signup {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.container a {
+  text-align: center;
+  padding: .5rem 1rem;
+  border-radius: 100px;
+  font-size: 12pt;
+  outline: none;
+  border: none;
+  background-color: rgb(0, 122, 255);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+.warning {
+  width: 75%;
+  font-size: 8pt;
+  text-align: left;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../assets/images/bg.png");
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  #go_to_app {
+    flex-direction: column;
+  }
+  
+  #go_to_app img {
+    display: none;
+  }
+
+  .warning {
+    width: 90%;
+    display: none;
+  }
+}
+
+
+/* Small devices (landscape phones) */
+@media (max-width: 576px) {
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+}
